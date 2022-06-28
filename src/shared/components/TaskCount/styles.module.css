@@ -1,0 +1,23 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-top: calc(4.0625em + 1.6875em);
+}
+
+.title {
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 0.875em;
+  line-height: 1.4;
+}
+
+.value {
+  color: var(--gray-200);
+  font-size: 0.75em;
+  line-height: 1.4;
+  font-weight: 700;
+  padding: 0.125em 0.5em;
+  background: var(--gray-400);
+  border-radius: 50%;
+}
