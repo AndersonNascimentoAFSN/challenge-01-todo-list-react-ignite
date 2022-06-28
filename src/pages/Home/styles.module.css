@@ -1,0 +1,14 @@
+.wrapper {
+  display: flex;
+  gap: 0.5em;
+  justify-content: center;
+  margin: -1.6875em auto;
+  width: 51vw;
+}
+
+.wrapperTaskCount {
+  display: flex;
+  justify-content: space-between;
+  width: 51vw;
+  margin: 0 auto;
+}
