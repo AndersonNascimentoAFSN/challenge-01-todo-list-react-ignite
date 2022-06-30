@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import { Header, TaskCount, Tasks } from '../../shared/components';
 import { Input } from '../../shared/components';
 import { Button } from '../../shared/components';
@@ -6,7 +7,7 @@ import styles from './styles.module.css';
 
 const tasksDefaultState = [
   {
-    id: 'task1',
+    id: uuidv4(),
     label:
       'Comprar pão na padaria da esquina que fica próxima de uma casa laranja esverdeada, ou será amarelada?',
     value: 'buyBread',
@@ -14,7 +15,7 @@ const tasksDefaultState = [
     isComplete: false,
   },
   {
-    id: 'task2',
+    id: uuidv4(),
     label: 'Comprar café',
     value: 'buyCoffee',
     name: 'task',
@@ -54,7 +55,7 @@ export function Home() {
     if (task) {
       setTasks((prevTasks) => [
         ...prevTasks,
-        { id: task, isComplete: false, label: task, value: task, name: task },
+        { id: uuidv4(), isComplete: false, label: task, value: task, name: task },
       ]);
 
       setTask('');
@@ -69,6 +70,8 @@ export function Home() {
   const qtyTasksCompleted = tasks.filter(
     (task) => task.isComplete === true
   ).length;
+
+  console.log(tasks);
 
   return (
     <main>
