@@ -1,14 +1,6 @@
 import { Task } from '../';
 import styles from './styles.module.css';
 
-interface ITask {
-  id: string;
-  label: string;
-  value: string;
-  name: string;
-  isComplete: boolean;
-}
-
 interface ITasksProps {
   tasks: {
     id: string;
