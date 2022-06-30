@@ -4,9 +4,7 @@ import styles from './styles.module.css';
 interface ITasksProps {
   tasks: {
     id: string;
-    label: string;
     value: string;
-    name: string;
     isComplete: boolean;
   }[];
   handleTaskCompleted: (id: string) => void;
@@ -16,12 +14,10 @@ interface ITasksProps {
 export function Tasks({ tasks, handleTaskCompleted, delTask }: ITasksProps) {
   return (
     <div className={styles.wrapperTask}>
-      {tasks.map(({ id, label, name, value, isComplete }) => (
+      {tasks.map(({ id, value, isComplete }) => (
         <Task
           key={id}
           id={id}
-          label={label}
-          name={name}
           value={value}
           isComplete={isComplete}
           handleTaskCompleted={handleTaskCompleted}

@@ -3,9 +3,7 @@ import styles from './styles.module.css';
 
 interface ITaskProps {
   id: string;
-  label: string;
   value: string;
-  name: string;
   isComplete: boolean;
   handleTaskCompleted: (id: string) => void;
   delTask: (id: string) => void;
@@ -13,12 +11,10 @@ interface ITaskProps {
 
 export function Task({
   id,
-  label,
   value,
-  name,
   isComplete,
   handleTaskCompleted,
-  delTask
+  delTask,
 }: ITaskProps) {
   function handleChangeTask() {
     handleTaskCompleted(id);
@@ -34,7 +30,6 @@ export function Task({
         <input
           type="checkbox"
           id={id}
-          name={name}
           value={value}
           onChange={handleChangeTask}
           checked={isComplete}
@@ -43,7 +38,7 @@ export function Task({
           htmlFor={id}
           className={isComplete ? styles.taskIsCompleted : ''}
         >
-          {label}
+          {value}
         </label>
       </div>
       <button className={styles.taskDelete} onClick={handleDelTask}>
