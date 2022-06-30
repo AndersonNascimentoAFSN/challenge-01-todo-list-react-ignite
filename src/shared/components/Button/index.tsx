@@ -12,22 +12,12 @@ interface ITask {
 
 interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   title: string;
-  addTask: (task: ITask) => void;
+  addTask: () => void;
 }
 
 export function Button({ title, addTask, ...props }: IButtonProps) {
-  function handleAddTask() {
-    addTask({
-      id: '',
-      label: '',
-      value: '',
-      name: '',
-      isComplete: false,
-    });
-  }
-
   return (
-    <button className={styles.button} {...props} onClick={handleAddTask}>
+    <button className={styles.button} {...props} onClick={addTask}>
       {title}
       <PlusCircle size={16} />
     </button>
