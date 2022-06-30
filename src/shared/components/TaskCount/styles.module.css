@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   gap: 0.5em;
-  margin-top: calc(4.0625em + 1.6875em);
 }
 
 .title {
