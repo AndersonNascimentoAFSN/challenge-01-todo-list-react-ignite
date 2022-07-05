@@ -8,12 +8,10 @@
   gap: 0.5em;
   justify-content: center;
   margin: -1.6875em auto;
-  /* width: 51vw; */
 }
 
 .wrapperTaskCount {
   display: flex;
   justify-content: space-between;
-  /* width: 51vw; */
   margin: calc(4.0625em + 1.6875em) auto 1.5em;
 }
