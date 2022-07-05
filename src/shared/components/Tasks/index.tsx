@@ -1,4 +1,5 @@
 import { Task } from '../';
+import { ListTasksEmpty } from '../ListTasksEmpty';
 import styles from './styles.module.css';
 
 interface ITasksProps {
@@ -14,7 +15,7 @@ interface ITasksProps {
 export function Tasks({ tasks, handleTaskCompleted, delTask }: ITasksProps) {
   return (
     <div className={styles.wrapperTask}>
-      {tasks.map(({ id, value, isComplete }) => (
+      {tasks.length !== 0 ? tasks.map(({ id, value, isComplete }) => (
         <Task
           key={id}
           id={id}
@@ -23,7 +24,7 @@ export function Tasks({ tasks, handleTaskCompleted, delTask }: ITasksProps) {
           handleTaskCompleted={handleTaskCompleted}
           delTask={delTask}
         />
-      ))}
+      )): <ListTasksEmpty />}
     </div>
   );
 }

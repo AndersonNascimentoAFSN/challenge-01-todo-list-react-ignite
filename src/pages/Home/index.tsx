@@ -5,20 +5,6 @@ import { Input } from '../../shared/components';
 import { Button } from '../../shared/components';
 import styles from './styles.module.css';
 
-const tasksDefaultState = [
-  {
-    id: uuidv4(),
-    value:
-      'Comprar pão na padaria da esquina que fica próxima de uma casa laranja esverdeada, ou será amarelada?',
-    isComplete: false,
-  },
-  {
-    id: uuidv4(),
-    value: 'Comprar café',
-    isComplete: false,
-  },
-];
-
 interface ITask {
   id: string;
   value: string;
@@ -26,7 +12,7 @@ interface ITask {
 }
 
 export function Home() {
-  const [tasks, setTasks] = useState<ITask[]>(tasksDefaultState);
+  const [tasks, setTasks] = useState<ITask[]>([]);
   const [task, setTask] = useState('');
 
   function handleTaskCompleted(id: string) {

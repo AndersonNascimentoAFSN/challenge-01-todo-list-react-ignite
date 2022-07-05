@@ -1,0 +1,21 @@
+.listTaskEmpty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 15.25em;
+  border-top: 1px solid var(--gray-400);
+  border-radius: 8px;
+}
+
+.listTaskEmpty img {
+  margin: 0 auto 1em;
+}
+
+.listTaskEmpty strong {
+  font-weight: 700;
+}
+
+.listTaskEmpty strong, span {
+  text-align: center;
+  line-height: 1.4;
+}
